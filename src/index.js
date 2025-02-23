@@ -1,17 +1,16 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Wait for the container element to be available
+const container = document.getElementById('teleparty-extension-root');
+console.log("Container in index.js:", container);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+if (container) {
+  const root = ReactDOM.createRoot(container);
+  root.render(<App />);
+} else {
+  console.error("Container not found. Make sure the content script runs on this page.");
+}
