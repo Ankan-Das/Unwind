@@ -18,7 +18,7 @@ console.log("Container appended:", container);
 
 // Dynamically load the React bundle
 const script = document.createElement("script");
-script.src = chrome.runtime.getURL("static/js/main.1dd862f0.js"); // Update with actual filename
+script.src = chrome.runtime.getURL("static/js/main.8b2962d6.js"); // Update with actual filename
 script.onload = function () {
   console.log("React bundle loaded");
   this.remove();

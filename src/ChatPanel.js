@@ -20,6 +20,12 @@ const ChatPanel = ({ onClose }) => {
     }
   };
 
+  // Compute default values relative to window dimensions
+  const initialX = Math.floor(window.innerWidth * 0.6);   // 10% from left
+  const initialY = Math.floor(window.innerHeight * 0.5);  // 10% from top
+  const initialWidth = Math.floor(window.innerWidth * 0.3);  // 30% of window width
+  const initialHeight = Math.floor(window.innerHeight * 0.4); // 40% of window height
+
   // Inline styles for the Rnd container
   const rndStyle = {
     background: "rgba(30, 30, 30, 0.9)",
@@ -94,14 +100,13 @@ const ChatPanel = ({ onClose }) => {
     background: "linear-gradient(135deg, rgba(0,188,212,0.6), rgba(0,150,200,0.6))",
   };
 
-  // Define the chat panel content to be portaled
   const chatContent = (
     <Rnd
       default={{
-        x: 50,
-        y: 50,
-        width: 350,
-        height: 400,
+        x: initialX,
+        y: initialY,
+        width: initialWidth,
+        height: initialHeight,
       }}
       minWidth={250}
       minHeight={300}

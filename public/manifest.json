@@ -19,7 +19,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["static/js/main.1dd862f0.js"],
+      "resources": ["static/js/main.8b2962d6.js"],
       "matches": ["*://*/*"]
     }
   ],
