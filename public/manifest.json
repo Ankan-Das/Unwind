@@ -1,22 +1,30 @@
 {
   "manifest_version": 3,
-  "name": "Teleparty Simple Test",
-  "version": "0.1",
-  "description": "A simple test extension that injects a React overlay on YouTube and Netflix.",
+  "name": "Teleparty Clone",
+  "version": "0.2",
+  "description": "A Teleparty clone that overlays on YouTube and Netflix.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
   "host_permissions": [
     "*://*/*"
   ],
-  "content_scripts": [
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
     {
-      "matches": ["*://*/*"],
-      "js": ["contentScript.js"],
-      "run_at": "document_idle"
+      "resources": ["static/js/main.1dd862f0.js"],
+      "matches": ["*://*/*"]
     }
   ],
-  "web_accessible_resources": [
-  {
-    "resources": ["static/js/main.b86ee573.js"],
-    "matches": ["*://*/*"]
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; trusted-types none;"
   }
-]
+
 }

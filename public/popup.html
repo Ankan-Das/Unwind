@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup</title>
-</head>
-<body>
-    <button id="injectButton">Inject React Bundle</button>
-    <script src="popup.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teleparty Clone</title>
+    <script src="popup.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #121212;
+        color: #fff;
+        margin: 0;
+        padding: 16px;
+        width: 300px;
+      }
+      h2 {
+        margin-bottom: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background: linear-gradient(135deg, rgba(0,188,212,0.5), rgba(0,150,200,0.5));
+        border: 1px solid #00BCD4;
+        border-radius: 8px;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background: linear-gradient(135deg, rgba(0,188,212,0.6), rgba(0,150,200,0.6));
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Teleparty Clone</h2>
+    <button id="startPartyBtn">Start the Party</button>
+  </body>
 </html>

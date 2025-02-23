@@ -1,0 +1,39 @@
+/* PartyUI.css */
+
+/* Container for the party overlay (room info and chat toggle) */
+.party-overlay {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00BCD4;
+    border-radius: 8px;
+    z-index: 2000;
+    pointer-events: auto;
+  }
+  
+  /* Room information styling */
+  .room-info {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Chat toggle button styling */
+  .chat-toggle-button {
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.5), rgba(0, 150, 200, 0.5));
+    color: #FFFFFF;
+    border: 1px solid #00BCD4;
+    border-radius: 8px;
+    padding: 4px;
+    transition: background 0.3s;
+  }
+  
+  .chat-toggle-button:hover {
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.6), rgba(0, 150, 200, 0.6));
+  }
+  

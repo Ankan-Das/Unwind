@@ -1,0 +1,89 @@
+/* ChatPanel.css */
+
+/* The outer container of the chat panel (provided by react-rnd) */
+.chat-panel {
+    background-color: rgba(30, 30, 30, 0.9);           /* Translucent dark background */
+    border: 2px solid #00BCD4;                   /* Vibrant accent border */
+    border-radius: 16px;                         /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);     /* Soft shadow */
+    overflow: hidden;
+    /* position: fixed; */
+    z-index: 10000;
+  }
+  
+  /* Container for all internal chat panel content */
+  .chat-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+  }
+  
+  /* Header styles – acts as the drag handle */
+  .chat-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 14px !important;
+    background: linear-gradient(135deg, rgba(0,188,212,0.6), rgba(0,150,200,0.6)) !important;  /* Translucent gradient */
+    border-bottom: 1px solid #00BCD4 !important;
+    cursor: move;
+  }
+  
+  .chat-header .chat-title {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+  }
+  
+  .chat-close-btn {
+    color: #FFFFFF !important;
+  }
+  
+  /* Chat messages area */
+  .chat-messages {
+    flex-grow: 1 !important;
+    padding: 10px !important;
+    overflow-y: auto !important;
+    background: transparent !important;
+  }
+  
+  /* Ensure list items have no extra margins */
+  .chat-messages .MuiListItem-root {
+    padding: 4px 0 !important;
+  }
+  
+  /* Chat input area */
+  .chat-input {
+    display: flex !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    border-top: 1px solid #00BCD4 !important;
+    background: rgba(30, 30, 30, 0.85) !important;
+  }
+  
+  /* Text field styling */
+  .chat-textfield {
+    flex-grow: 1 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;  /* Subtle translucent white */
+    border-radius: 8px !important;
+  }
+  
+  .chat-textfield input {
+    color: #FFFFFF !important;
+    padding: 8px !important;
+  }
+  
+  /* Send button styling */
+  .chat-send-btn {
+    background: linear-gradient(135deg, rgba(0,188,212,0.5), rgba(0,150,200,0.5)) !important;
+    border: 1px solid #00BCD4 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,188,212,0.3) !important;
+    transition: background 0.3s !important;
+    padding: 8px 16px !important;
+  }
+  
+  .chat-send-btn:hover {
+    background: linear-gradient(135deg, rgba(0,188,212,0.6), rgba(0,150,200,0.6));
+  }
+  
